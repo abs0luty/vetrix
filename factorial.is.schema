@@ -1,0 +1,12 @@
+package factorial
+
+query(input) file_contents(filepath: String) -> String
+
+query(intern) resolve_item(item: Item) -> ItemId
+query(intern) resolve_item(signature: Signature) -> SignatureId
+
+query(exec) scan(filepath: String) -> List<Token>
+query(exec) parse(filepath: String) -> List<Statement>
+query(exec) parse_item(filepath: String, id: ItemId) -> Statement
+query(exec) analyze(ast: List<Statement>) -> Ctx
+query(exec) item_signature(ctx: Ctx, id: ItemId) -> SignatureId
